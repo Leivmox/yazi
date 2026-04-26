@@ -72,6 +72,9 @@ doc = [
 typora = [
     { run = 'typora "%1"', orphan = true, desc = "Typora", for = "windows" },
 ]
+ql = [
+    { run = 'D:\Lambda\Tools\QuickLook-4.5.0\QuickLook.exe "%1"', desc = "QuickLook", orphan = true }
+]
 
 [open]
 rules = [
@@ -82,9 +85,9 @@ rules = [
 	# Text
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
 	# Image
-	{ mime = "image/*", use = [ "open", "reveal" ] },
+	{ mime = "image/*", use = ["ql", "open", "reveal" ] },
 	# Media
-	{ mime = "{audio,video}/*", use = [ "play", "reveal" ] },
+	{ mime = "{audio,video}/*", use = ["ql", "play", "reveal" ] },
 	# Archive
 	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", use = [ "extract", "reveal" ] },
 	# JSON
@@ -169,6 +172,15 @@ previewers = [
 	{ mime = "inode/empty", run = "empty" },
 	# Fallback
 	{ name = "*", run = "file" },
+]
+prepend_previewers = [
+	{ name = "*.md", run = "bat --style=numbers" },
+	{ name = "*.txt", run = "bat --style=numbers" },
+	{ name = "*.toml", run = "bat --style=numbers" },
+	{ name = "*.py", run = "bat --style=numbers" },
+	{ name = "*.lua", run = "bat --style=numbers" },
+	{ mime = "text/*", run = "bat --style=numbers" },
+	{ mime = "application/json", run = "bat --style=numbers" },
 ]
 
 [input]
