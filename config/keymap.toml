@@ -47,7 +47,7 @@ keymap = [
   # 切换与快速预览
   { on = "i",       run = [ "toggle", "arrow next" ], desc = "切换当前选中状态" },
   # { on = "<Space>", run = "open --using ql",          desc = "QuickLook 预览" },
-  { on = "<Space>", run = "shell 'D:\\Lambda\\Tools\\QuickLook-4.5.0\\QuickLook.exe \"%1\"' --orphan", desc = "QuickLook 预览" },
+  { on = "<Space>", run = "shell 'D:\\Lambda\\Tools\\QuickLook\\QuickLook.exe \"%1\"' --orphan", desc = "QuickLook 预览" },
 
 	{ on = "<C-a>",   run = "toggle_all --state=on",    desc = "全选文件" },
 	{ on = "<C-r>",   run = "toggle_all",               desc = "反选所有文件" },
