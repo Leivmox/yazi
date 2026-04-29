@@ -136,6 +136,7 @@ keymap = [
 	{ on = [ "g", "f" ],       run = "follow",           desc = "跟随当前悬浮的软链接" },
   {on    = [ "g", "D" ], run  = 'cd "D:/"', desc = "前往 D 盘"},
   {on    = [ "g", "C" ], run  = 'cd "C:/"', desc = "前往 C 盘"},
+  {on    = [ "g", "J" ], run  = 'cd "J:/"', desc = "前往 J 盘"},
   {on    = [ "g", "r" ], run  = 'cd "D:/Lambda/git_repo/"', desc = "前往 git_repo"},
 
 	# 标签页
