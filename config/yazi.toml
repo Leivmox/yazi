@@ -75,13 +75,19 @@ typora = [
 ql = [
     { run = 'D:\Lambda\Tools\QuickLook-4.5.0\QuickLook.exe "%1"', desc = "QuickLook", orphan = true }
 ]
+"7zip" = [
+    { run = '"C:\Program Files\7-Zip-Zstandard\7zFM.exe" "%1"', orphan = true, desc = "7-Zip", for = "windows" }
+]
+
 
 [open]
 rules = [
   # Markdown files
 	{ name = "*.md", use = [ "typora", "edit", "reveal" ] },
 	# Folder
-	{ name = "*/", use = [ "edit", "open", "reveal" ] },
+	# { name = "*/", use = [ "edit", "open", "reveal" ] },
+  #🌟 终极拯救文件夹回车：强行指定当它是文件夹时，使用 Yazi 内置的 "enter" 行为
+  { name = "*/", use = [] },
 	# Text
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
 	# Image
@@ -89,7 +95,7 @@ rules = [
 	# Media
 	{ mime = "{audio,video}/*", use = ["ql", "play", "reveal" ] },
 	# Archive
-	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", use = [ "extract", "reveal" ] },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", use = [ "7zip","extract", "reveal" ] },
 	# JSON
 	{ mime = "application/{json,ndjson}", use = [ "edit", "reveal" ] },
 	{ mime = "*/javascript", use = [ "edit", "reveal" ] },
