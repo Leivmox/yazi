@@ -73,7 +73,7 @@ typora = [
     { run = 'typora "%1"', orphan = true, desc = "Typora", for = "windows" },
 ]
 ql = [
-    { run = 'D:\Lambda\Tools\QuickLook-4.5.0\QuickLook.exe "%1"', desc = "QuickLook", orphan = true }
+    { run = 'D:\Lambda\Tools\QuickLook\QuickLook.exe "%1"', desc = "QuickLook", orphan = true }
 ]
 
 [open]
