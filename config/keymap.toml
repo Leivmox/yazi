@@ -34,10 +34,12 @@ keymap = [
 
 	# 导航
 	{ on = "h", run = "leave", desc = "返回上级目录" },
-	{ on = "l", run = "enter", desc = "进入子目录" },
+	# { on = "l", run = "enter", desc = "进入子目录" },
+	{ on = "l", run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
 
 	{ on = "<Left>",  run = "leave", desc = "返回上级目录" },
-	{ on = "<Right>", run = "enter", desc = "进入子目录" },
+	# { on = "<Right>", run = "enter", desc = "进入子目录" },
+	{ on = "<Right>", run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
 
 	{ on = "H", run = "back",    desc = "后退到上一个浏览的目录" },
 	{ on = "L", run = "forward", desc = "前进到下一个浏览的目录" },
@@ -66,7 +68,8 @@ keymap = [
 	# 文件操作
 	{ on = "o",         run = "open",                        desc = "打开选中的文件" },
 	{ on = "O",         run = "open --interactive",          desc = "交互式打开选中的文件" },
-	{ on = "<Enter>",   run = "open",                        desc = "打开选中的文件" },
+	# { on = "<Enter>",   run = "open",                        desc = "打开选中的文件" },
+  { on = "<Enter>",   run = "plugin smart-enter",          desc = "智能回车：进目录或打开文件" },
 	{ on = "<S-Enter>", run = "open --interactive",          desc = "交互式打开选中的文件" },
 	{ on = "y",         run = "yank",                        desc = "复制选中的文件" },
 	{ on = "x",         run = "yank --cut",                  desc = "剪切选中的文件" },
