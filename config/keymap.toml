@@ -1,6 +1,6 @@
 # 像 https://taplo.tamasfe.dev/ 这样的 TOML linter 可以使用此架构来验证你的配置。
 # 如果遇到任何问题，请在 https://github.com/yazi-rs/schemas 提交 issue。
-"$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
+
 
 [mgr]
 

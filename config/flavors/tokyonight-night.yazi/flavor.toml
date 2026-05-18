@@ -2,7 +2,7 @@
 
 # : Manager {{{
 
-[manager]
+[mgr]
 cwd = { fg = "#a9b1d6", italic = true }
 
 # Hovered
@@ -18,11 +18,6 @@ marker_copied   = { fg = "#73daca", bg = "#73daca" }
 marker_cut      = { fg = "#f7768e", bg = "#f7768e" }
 marker_marked   = { fg = "#bb9af7", bg = "#bb9af7" }
 marker_selected = { fg = "#7aa2f7", bg = "#7aa2f7" }
-
-# Tab
-tab_active   = { fg = "#c0caf5", bg = "#292e42" }
-tab_inactive = { fg = "#3b4261", bg = "#1a1b26" }
-tab_width    = 1
 
 # Count
 count_copied   = { fg = "#c0caf5", bg = "#41a6b5" }
@@ -201,20 +196,16 @@ rules = [
 
 	# Archives
 	{ mime = "application/*zip", fg = "#f7768e" },
-	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "#f7768e" },
+	{ mime = "application/{tar,bzip*,7z-compressed,xz,rar}", fg = "#f7768e" },
 
 	# Documents
-	{ mime = "application/{pdf,doc,rtf,vnd.*}", fg = "#7dcfff" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#7dcfff" },
 
 	# Empty files
 	# { mime = "inode/x-empty", fg = "#f7768e" },
 
-	# Special files
-	{ name = "*", is = "orphan", bg = "#f7768e" },
-	{ name = "*", is = "exec"  , fg = "#9ece6a" },
-
 	# Fallback
-	{ name = "*/", fg = "#7aa2f7" }
+	{ url = "*/", fg = "#7aa2f7" }
 ]
 
 # : }}}
