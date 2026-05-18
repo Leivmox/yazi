@@ -58,8 +58,8 @@ unset_alt   = { fg = "#9d7cd8", bg = "#3b4261" }
 # : Status bar {{{
 
 [status]
-separator_open    = ""
-separator_close   = ""
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
 
 # Progress
 progress_label  = { fg = "#a9b1d6", bold = true }
@@ -99,14 +99,14 @@ selected = { bg = "#283457" }
 
 # : Completion {{{
 
-[completion]
+[cmp]
 border   = { fg = "#0db9d7" }
 active   = { fg = "#c0caf5", bg = "#283457" }
 inactive = { fg = "#c0caf5" }
 
-icon_file    = ""
-icon_folder  = ""
-icon_command = ""
+icon_file    = ""
+icon_folder  = ""
+icon_command = ""
 
 # : }}}
 
@@ -165,9 +165,9 @@ title_info  = { fg = "#0db9d7" }
 title_warn  = { fg = "#e0af68" }
 title_error = { fg = "#db4b4b" }
 
-icon_error = ""
-icon_warn = ""
-icon_info = ""
+icon_error = ""
+icon_warn  = ""
+icon_info  = ""
 
 # : }}}
 
@@ -201,12 +201,8 @@ rules = [
 	# Documents
 	{ mime = "application/{pdf,doc,rtf}", fg = "#7dcfff" },
 
-	# Empty files
-	# { mime = "inode/x-empty", fg = "#f7768e" },
-
 	# Fallback
 	{ url = "*/", fg = "#7aa2f7" }
 ]
 
 # : }}}
-

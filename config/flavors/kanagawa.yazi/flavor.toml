@@ -83,7 +83,7 @@ title = {}
 value = {}
 selected = { reversed = true }
 
-[completion]
+[cmp]
 border = { fg = "#7fb4ca" }
 active = { reversed = true }
 inactive = {}
