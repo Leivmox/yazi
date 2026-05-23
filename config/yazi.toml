@@ -93,6 +93,8 @@ rules = [
 	# Word documents
 	{ url = "*.doc", use = [ "doc" ] },
 	{ url = "*.docx", use = [ "doc" ] },
+  # ini
+  { url = "*.ini", use = [ "edit", "reveal" ] },
 	# Fallback
 	{ url = "*", use = [ "open", "reveal" ] },
 ]
